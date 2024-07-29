@@ -61,9 +61,9 @@ Looking to split the work in phases and hoping to start with phase one which wil
 
 ## TO DO
 
-- Recommended Posts
-- search by hashtags
-- show liked posts
+- Can see the dashboard with all the details
+- Can perform CRUD operation
+- Can navigate to different pages also 
 
 ## Tech Stack
 
