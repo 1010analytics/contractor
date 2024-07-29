@@ -55,7 +55,7 @@ const Navbar = () => {
   );
 
   return (
-    <AppBar position="static" sx={{ bgcolor: '#B4E380' }}>
+    <AppBar position="static" sx={{ bgcolor: '#389ba7' }}>
       <Toolbar>
         {isMobile && (
           <IconButton
@@ -72,28 +72,34 @@ const Navbar = () => {
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Logo</Link>
         </Typography>
         {!isMobile && (
-          <Box sx={{ flexGrow: 5, display: 'flex', justifyContent: 'center', gap: 2 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexGrow: 1 }}>
             <Button color="inherit">
-              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' , fontWeight: 700 }}>Home</Link>
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 700 }}>Home</Link>
             </Button>
             <Button color="inherit">
-              <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' , fontWeight: 700 }}>About</Link>
+              <Link to="/about" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 700 }}>About</Link>
             </Button>
             <Button color="inherit">
-              <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' , fontWeight: 700 }}>Services</Link>
+              <Link to="/services" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 700 }}>Services</Link>
             </Button>
             <Button color="inherit">
-              <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' , fontWeight: 700 }}>Contact Us</Link>
+              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 700 }}>Contact Us</Link>
             </Button>
           </Box>
         )}
         {!isMobile && (
-          <Box sx={{ display: 'flex', gap: 2 }}>
-            <Button color="secondary">
-              <Link to="/login" style={{ textDecoration: 'none', color: '#ffffff' ,fontWeight: 700 }}>Login</Link>
+          <Box sx={{ display: 'flex', gap: 2, ml: 2 }}>
+            <Button
+              color="secondary"
+              sx={{ border: '3px solid white' }}
+            >
+              <Link to="/login" style={{ textDecoration: 'none', color: '#ffffff', fontWeight: 700, width: 100 }}>Login</Link>
             </Button>
-            <Button color="secondary">
-              <Link to="/signup" style={{ textDecoration: 'none', color: '#ffffff' , fontWeight: 700}}>Signup</Link>
+            <Button
+              color="secondary"
+              sx={{ border: '3px solid white' }}
+            >
+              <Link to="/signup" style={{ textDecoration: 'none', color: '#ffffff', fontWeight: 700, width: 100 }}>Signup</Link>
             </Button>
           </Box>
         )}

@@ -4,15 +4,15 @@ import { Email, Phone, Facebook, Twitter, Instagram } from '@mui/icons-material'
 
 const Footer = () => {
   return (
-    <Box sx={{ bgcolor: '#B4E380', color: 'white', p: 4 }}>
+    <Box sx={{ bgcolor: '#389ba7', color: 'white', p: 4 }}>
       <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12} sm={6} md={4}>
           <Typography variant="h6" gutterBottom sx={{fontWeight:700}}>
             Quick Links
           </Typography>
-          <Link href="/" color="inherit" sx={{ display: 'block', mb: 1  }}>Home</Link>
+          <Link href="/" color="inherit" sx={{ display: 'block', mb: 1 }}>Home</Link>
           <Link href="/about" color="inherit" sx={{ display: 'block', mb: 1 }}>About</Link>
-          <Link href="/services" color="inherit" sx={{ display: 'block', mb: 1  }}>Services</Link>
+          <Link href="/services" color="inherit" sx={{ display: 'block', mb: 1 }}>Services</Link>
           <Link href="/contact" color="inherit" sx={{ display: 'block', mb: 1 }}>Contact</Link>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>

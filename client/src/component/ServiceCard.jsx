@@ -5,36 +5,45 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material/styles';
 
 const ServiceCard = ({ service }) => {
+  const theme = useTheme();
+
   return (
-    <Card sx={{ maxWidth: 345, margin: 2 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image={service.image}
-        alt={service.title}
-      />
+    <Card 
+      sx={{
+        width: { xs: '100%', sm: 350 }, 
+        height: 320, 
+        margin: 2, 
+        bgcolor: '#389ba7', 
+        color: 'white', 
+        textAlign: 'center', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between'
+      }}
+    >
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {service.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {service.description}
-        </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center', mt: 2 }}>
-          <Rating name="read-only" value={service.rating} readOnly />
+        <CardMedia
+          component="img"
+          height="140"
+          image={service.image}
+          alt={service.title}
+          sx={{ margin: 'auto', maxHeight: 140 }}
+        />
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2 }}>
+          <Rating name="read-only" value={service.rating} readOnly max={1} />
           <Typography variant="body2" sx={{ ml: 1 }}>
             {service.rating} ({service.reviews} reviews)
           </Typography>
         </Box>
-        <Typography variant="h6" sx={{ mt: 2 }}>
+        <Typography variant="h6" sx={{ mt: 1 }}>
           ${service.price}
         </Typography>
-        <Button variant="contained" sx={{ bgcolor: '#B4E380', mt: 2 }}>
-          Buy Now
-        </Button>
       </CardContent>
     </Card>
   );

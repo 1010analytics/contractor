@@ -11,32 +11,32 @@ import Cook from '../images/cook.jpeg';
 const services = [
   {
     image: Maid,
-    title: 'Home Services',
-    description: 'This is the description for service 1.',
+    title: 'Home Repairs Maintance',
+    
     rating: 4.5,
     reviews: 120,
     price: 100,
   },
   {
     image: Plumber,
-    title: 'Plumbering',
-    description: 'This is the description for service 2.',
+    title: 'Cleaning Services',
+    
     rating: 4.0,
     reviews: 90,
     price: 150,
   },
   {
     image: Electic,
-    title: 'Electricity Repair',
-    description: 'This is the description for service 2.',
+    title: 'Landscaping And Outdor Services',
+    
     rating: 4.0,
     reviews: 90,
     price: 150,
   },
   {
     image: Cook,
-    title: 'Shef ',
-    description: 'This is the description for service 2.',
+    title: 'Renovation And Remodeling',
+    
     rating: 4.0,
     reviews: 90,
     price: 150,
@@ -47,8 +47,8 @@ const services = [
 const Services = () => {
   return (
     <Box sx={{ flexGrow: 1, p: 4, backgroundColor: '#fff' }}>
-      <Typography variant="h4" sx={{ mb: 4, textAlign: 'center' }}>
-        Our Services
+      <Typography  sx={{ mb: 4, textAlign: 'center' ,color: '#389ba7' , fontSize:'42px' , fontWeight: 700}}>
+        Services
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         {services.map((service, index) => (
